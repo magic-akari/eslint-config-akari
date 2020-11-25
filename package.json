@@ -1,0 +1,14 @@
+{
+  "name": "eslint-config-akari",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magic-akari/eslint-config-akari.git"
+  },
+  "author": "阿卡琳 <akari.ccino@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magic-akari/eslint-config-akari/issues"
+  },
+  "homepage": "https://github.com/magic-akari/eslint-config-akari#readme"
+}
