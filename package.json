@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-akari",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "scripts": {
         "eslint": "eslint \"{base,rules,tools}/**/*.js\"",
         "eslint:fix": "eslint --fix \"{base,rules,tools}/**/*.js\"",
