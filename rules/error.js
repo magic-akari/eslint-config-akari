@@ -19,6 +19,13 @@ module.exports = {
     // https://eslint.org/docs/rules/no-loss-of-precision
     "no-loss-of-precision": "warn",
 
+    // 可能把 return value 与 resolve 混淆
+    // https://eslint.org/docs/rules/no-promise-executor-return
+    "no-promise-executor-return": "error",
+
+    // https://eslint.org/docs/rules/no-template-curly-in-string
+    "no-template-curly-in-string": "warn",
+
     // Disallow loops with a body that allows only one iteration
     // https://eslint.org/docs/rules/no-unreachable-loop
     "no-unreachable-loop": "error",

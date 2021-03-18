@@ -20,6 +20,8 @@ module.exports = {
     // replaced by https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
     "no-duplicate-imports": "off",
 
+    "no-useless-computed-key": "warn",
+
     // disallow unnecessary constructor
     // https://eslint.org/docs/rules/no-useless-constructor
     "no-useless-constructor": "error",
@@ -68,7 +70,7 @@ module.exports = {
 
     // suggest using template literals instead of string concatenation
     // https://eslint.org/docs/rules/prefer-template
-    "prefer-template": "warn",
+    "prefer-template": "off",
 
     "rest-spread-spacing": "error",
 

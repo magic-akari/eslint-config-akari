@@ -1,6 +1,5 @@
 module.exports = {
-    extends: ["eslint:recommended", "plugin:node/recommended", "prettier"],
-    plugins: ["node"],
+    extends: ["eslint:recommended", "plugin:node/recommended", "plugin:prettier/recommended"],
     rules: {
         // Strict Mode
         strict: "warn",

@@ -3,8 +3,11 @@ module.exports = {
     // https://eslint.org/docs/rules/no-label-var
     "no-label-var": "error",
 
+    "no-shadow": "error",
+
     // disallow use of variables before they are defined
-    "no-use-before-define": ["warn", { functions: false, classes: true, variables: true }],
+    // 在主要使用 `let` 和 `const` 的环境下, 意义不大
+    "no-use-before-define": "off",
 
     "one-var": ["warn", "never"],
 };

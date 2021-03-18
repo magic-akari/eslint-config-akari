@@ -1,5 +1,5 @@
 module.exports = {
-    extends: ["eslint:recommended", "prettier"],
+    extends: ["eslint:recommended", "plugin:prettier/recommended"],
     rules: {
         "prefer-numeric-literals": "off",
         "no-restricted-properties": [
@@ -18,6 +18,7 @@ module.exports = {
                 message: "Please use Object.defineProperty instead.",
             },
         ],
+        "no-use-before-define": "warn",
         "no-var": "off",
         "prefer-object-spread": "off",
         strict: ["error", "safe"],

@@ -21,7 +21,11 @@ module.exports = {
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",
     },
-    plugins: ["import", "react", "react-hooks"],
-    extends: ["plugin:import/react", "plugin:react/recommended", "prettier"],
+    extends: [
+        "plugin:import/react",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:prettier/recommended",
+    ],
     settings: { react: { version: "detect" } },
 };

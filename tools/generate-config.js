@@ -17,7 +17,7 @@ const CONFIG_BASE_LEGACY = require("../base/legacy");
 const CONFIG_BASE_NODE = require("../base/node");
 const CONFIG_BASE_REACT = require("../base/react");
 const CONFIG_BASE_TYPESCRIPT = require("../base/typescript");
-const eslintConfigakariNode = require("../node");
+const eslintNodeConfig = require("../node");
 const akariBestPracticesRules = require("../rules/best-practices");
 const akariCodeStyleRules = require("../rules/code-style");
 const akariErrorRules = require("../rules/error");
@@ -148,7 +148,9 @@ Object.entries(generatedTsConfigRules).forEach(([ruleName, ruleConfig]) => {
             "=",
             ruleConfig === "error" ? chalk.red(ruleConfig) : chalk.yellow(ruleConfig),
         );
-        generatedTsConfigRules[`${TS_ESLINT_RULE_NAME_PREFIX}${ruleName}`] = ruleConfig;
+        if (!generatedTsConfigRules[`${TS_ESLINT_RULE_NAME_PREFIX}${ruleName}`]) {
+            generatedTsConfigRules[`${TS_ESLINT_RULE_NAME_PREFIX}${ruleName}`] = ruleConfig;
+        }
     }
 
     if (ruleName === "@typescript-eslint/naming-convention") {
@@ -203,7 +205,7 @@ function writeConfig(config, filePath) {
             parser: "babel",
             ...prettierConfig,
         }),
-        eslintConfigakariNode,
+        eslintNodeConfig,
     );
 
     writeFileSync(filePath, configStr.output);

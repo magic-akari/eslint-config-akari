@@ -110,6 +110,8 @@ module.exports = {
     // https://eslint.org/docs/rules/new-parens
     "new-parens": "error",
 
+    "no-plusplus": ["warn", { allowForLoopAfterthoughts: true }],
+
     "no-array-constructor": "error",
 
     // disallow use of bitwise operators

@@ -1,17 +1,31 @@
 module.exports = {
     "@typescript-eslint/naming-convention": [
         "warn",
-        // Allow camelCase variables (23.2), PascalCase variables (23.8), and UPPER_CASE variables (23.10)
         {
             selector: "variable",
             format: ["camelCase", "snake_case", "UPPER_CASE", "PascalCase"],
         },
-        // Allow camelCase functions (23.2), and PascalCase functions (23.8)
+        {
+            selector: ["variable", "parameter"],
+            types: ["boolean"],
+            format: ["PascalCase"],
+            prefix: ["is", "should", "has", "can", "did", "will", "without", "with"],
+        },
+        {
+            selector: "variable",
+            format: null,
+            modifiers: ["unused"],
+            leadingUnderscore: "require",
+        },
+        {
+            selector: "variable",
+            modifiers: ["destructured"],
+            format: null,
+        },
         {
             selector: "function",
             format: ["camelCase", "PascalCase"],
         },
-        // Airbnb recommends PascalCase for classes (23.3), and although Airbnb does not make TypeScript recommendations, we are assuming this rule would similarly apply to anything "type like", including interfaces, type aliases, and enums
         {
             selector: "typeLike",
             format: ["PascalCase"],
@@ -24,6 +38,7 @@ module.exports = {
     "@typescript-eslint/no-implicit-any-catch": "error",
     "@typescript-eslint/no-shadow": ["error", { ignoreTypeValueShadow: true }],
     "@typescript-eslint/no-unnecessary-condition": "error",
+    "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/non-nullable-type-assertion-style": "warn",
     "@typescript-eslint/prefer-includes": "error",
     "@typescript-eslint/prefer-optional-chain": "warn",
