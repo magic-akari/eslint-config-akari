@@ -253,6 +253,7 @@ module.exports = {
         "@typescript-eslint/no-array-constructor": "error",
         "@typescript-eslint/quotes": 0,
         "@typescript-eslint/semi": "off",
+        "@typescript-eslint/space-before-blocks": "off",
         "@typescript-eslint/space-before-function-paren": "off",
         "@typescript-eslint/space-infix-ops": "off",
     },

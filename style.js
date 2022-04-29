@@ -3,6 +3,6 @@ module.exports = {
     rules: {
         "function-name-case": ["lower", { ignoreFunctions: [/^\$/u, /^css/u, /\./u] }],
         "length-zero-no-unit": [true, { ignore: ["custom-properties"], severity: "warning" }],
-        "value-keyword-case": ["lower", { ignoreKeywords: [/^\$/u, /\./u] }],
+        "value-keyword-case": ["lower", { camelCaseSvgKeywords: true, ignoreKeywords: [/^\$/u, /\./u] }],
     },
 };
