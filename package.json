@@ -2,21 +2,20 @@
     "name": "eslint-config-akari",
     "version": "0.0.5",
     "scripts": {
-        "eslint": "eslint \"{base,rules,tools}/**/*.js\"",
-        "eslint:fix": "eslint --fix \"{base,rules,tools}/**/*.js\"",
-        "prettier": "prettier -l \"{base,rules,tools}/**/*.js\"",
-        "prettier:fix": "prettier --write \"{base,rules,tools}/**/*.js\"",
-        "build": "node ./tools/generate-config.cjs",
-        "preversion": "npm run build",
+        "eslint": "eslint \"./*.js\"",
+        "eslint:fix": "eslint --fix \"./*.js\"",
+        "prettier": "prettier -l \"./*.js\"",
+        "prettier:fix": "prettier --write \"./*.js\"",
         "version:patch": "HUSKY=0 npm version patch",
         "postinstall": "husky install",
-        "prepublishOnly": "npm run build && pinst --disable",
+        "prepublishOnly": "pinst --disable",
         "postpublish": "pinst --enable"
     },
     "main": "ecmascript.js",
     "engines": {
         "node": ">= 8.3.0"
     },
+    "packageManager": "pnpm@7.26.0",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/magic-akari/eslint-config-akari.git"
@@ -28,36 +27,15 @@
     },
     "homepage": "https://github.com/magic-akari/eslint-config-akari#readme",
     "devDependencies": {
-        "@commitlint/cli": "^16.2.4",
-        "@commitlint/config-conventional": "^16.2.4",
-        "@types/eslint": "^8.4.1",
-        "@types/lodash": "^4.14.182",
-        "@types/node": "^17.0.30",
-        "@types/prettier": "^2.6.0",
-        "chalk": "^4.1.2",
-        "commitizen": "^4.2.4",
+        "@commitlint/cli": "^17.4.2",
+        "@commitlint/config-conventional": "^17.4.2",
+        "commitizen": "^4.3.0",
         "cz-conventional-changelog": "^3.3.0",
-        "husky": "^7.0.4",
-        "lint-staged": "^12.4.1",
-        "lodash": "^4.17.21",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.1.0",
         "pinst": "^3.0.0",
-        "typescript": "^4.6.4"
-    },
-    "dependencies": {
-        "@typescript-eslint/eslint-plugin": "^5.21.0",
-        "@typescript-eslint/parser": "^5.21.0",
-        "eslint": "^8.14.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-import": "^2.26.0",
+        "eslint": "^8.32.0",
         "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-prettier": "^4.0.0",
-        "eslint-plugin-react": "^7.29.4",
-        "eslint-plugin-react-hooks": "^4.5.0",
-        "prettier": "^2.6.2",
-        "stylelint-config-prettier": "^9.0.3",
-        "stylelint-config-rational-order": "^0.1.2",
-        "stylelint-config-standard": "^25.0.0",
-        "stylelint-order": "^5.0.0",
-        "stylelint-prettier": "^2.0.0"
+        "prettier": "^2.8.3"
     }
 }
