@@ -15,7 +15,7 @@
     "engines": {
         "node": ">= 8.3.0"
     },
-    "packageManager": "pnpm@7.26.0",
+    "packageManager": "pnpm@7.33.6",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/magic-akari/eslint-config-akari.git"
