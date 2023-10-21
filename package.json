@@ -28,7 +28,7 @@
     "homepage": "https://github.com/magic-akari/eslint-config-akari#readme",
     "devDependencies": {
         "@commitlint/cli": "^17.4.2",
-        "@commitlint/config-conventional": "^17.4.2",
+        "@commitlint/config-conventional": "^18.0.0",
         "commitizen": "^4.3.0",
         "cz-conventional-changelog": "^3.3.0",
         "husky": "^8.0.3",
